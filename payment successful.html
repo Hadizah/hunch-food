@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunch - Payment Successful</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="placeholder-logo.png" alt="Hunch Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="orderpage.html">Order Page</a></li>
+                    <li><a href="Basic info.html">About Us</a></li>
+                    <li><a href="payment successful.html">Track Order</a></li>
+                    <li><a href="card details.html">Contact Us</a></li>
+                    <li><a href="home page.html">Get by Jollof</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="payment-success-page">
+        <section class="info-cards-section">
+            <div class="info-card">
+                <p>Hunch offers a flexible subscription model, allowing users to manage their meal plans with ease. Pause, skip, or cancel anytime based on their needs and preferences.</p>
+            </div>
+            <div class="info-card">
+                <p>With Hunch's Taste Profile system, users can easily identify meals that align with their dietary restrictions and flavor preferences, making meal selection a breeze.</p>
+            </div>
+            <div class="info-card">
+                <p>Hunch prioritizes eco-conscious packaging for all its deliveries, ensuring that your healthy meals arrive in environmentally friendly materials.</p>
+            </div>
+            <div class="info-card">
+                <p>Every Hunch meal is carefully prepared by certified nutritionists and experienced chefs, guaranteeing a balance of delicious taste and optimal nutritional value in every bite.</p>
+            </div>
+        </section>
+
+        <section class="payment-notification-section">
+            <div class="payment-successful-card">
+                <h2>Your payment of NGN 5,000 was successful!</h2>
+                <div class="success-icon">
+                    </div>
+                <button class="button secondary small">Track my order</button>
+            </div>
+
+            <div class="waitlist-buttons">
+                <button class="button primary">Join the Waitlist</button>
+                <button class="button primary">Join the Waitlist</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="placeholder-logo-footer.png" alt="Hunch Footer Logo">
+                </div>
+                <div class="footer-links">
+                    <div class="quick-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Meal Plans</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Contact</h3>
+                        <p>Email: info.hunch@gmail.com</p>
+                        <p>Phone: 01-234-8976</p>
+                        <p>Address: 61, Wesley street, Lagos, Nigeria.</p>
+                    </div>
+                </div>
+                <div class="footer-subscribe">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <form>
+                        <input type="email" placeholder="Your Email Address">
+                        <button type="submit" class="button secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hunch. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><img src="placeholder-facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="placeholder-twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="placeholder-instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const trackOrderButton = document.querySelector('.payment-successful-card .button.secondary');
+    if (trackOrderButton) {
+        trackOrderButton.addEventListener('click', () => {
+            // Add logic to redirect or show the order tracking information
+            console.log('Track order button clicked');
+            window.location.href = '/track-order'; // Example redirection
+        });
+    }
+
+    const waitlistButtons = document.querySelectorAll('.waitlist-buttons .button.primary');
+    waitlistButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Add logic to handle joining the waitlist 
+            console.log('Join waitlist button clicked');
+            alert('You have joined the waitlist!'); 
+            
+        });
+    });
+});
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="orderpage.html">Order Page</a></li>
+                <li><a href="Basic info.html">About Us</a></li>
+                <li><a href="payment successful.html">Track Order</a></li>
+                <li><a href="card details.html">Contact Us</a></li>
+                <li><a href="home page.html">Get by Jollof</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="slideshow">
+                <div class="slide active"
+            class="checkout-page">
+            <div class="left-column">
+                <section class="jollof-details">
+                    <h3>What's In Your Jollof?</h3>
+                    <ul>
+                        <li>Rice Portion: 300g Per Pack</li>
+                        <li>Extras: Veggie Salads, Plantains</li>
+                        <li>Protein Choice: Grilled Chicken | Fish | Beef</li>
+                        <li>Calories Approx: 550 KCal Per Pack </li>
+                        </ul>
+                        <hr class="faint-line">
+                    <h3>Did you know?</h3>
+                    <p>Your Hunch Jollof isn't just delicious- it is packed with heart-friendly antioxidants from tomatoes, muscle-building protein, and fiber-rich veggies for better digestion. Plus, with potassium-rich plantains and a spicy kick to boost metabolism, every bite is as nourishing as it is satisfying.</p>
+                    
+            </div>
+        </section>
+
+            <section class="order-status">
+                <h3>Order Status</h3>
+                <div class="status-steps">
+                    <div class="step">
+                        <div class="indicator active"></div>
+                        <span class="label">Order Placed</span>
+                    </div>
+                    <div class="step">
+                        <div class="indicator"></div>
+                        <span class="label">Preparing</span>
+                    </div>
+                    <div class="step">
+                        <div class="indicator"></div>
+                        <span class="label">Out for Delivery</span>
+                    </div>
+                    <div class="step">
+                        <div class="indicator"></div>
+                        <span class="label">Delivered</span>
+                    </div>
+                    <div class="progress-line"></div>
+                </div>
+                <div class="order-id">Order ID: ...</div>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <section class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-items">
+                    <div class="item">
+                        <span>Order ID</span>
+                        <span>HUNCH-94567</span>
+                    </div>
+                    <div class="Delivery address">
+                        <span>5, Oak street, Lagos, Nigeria.</span>
+                        
+                    </div>
+                    </div>
+                <div class="summary-totals">
+                    <div class="total-item">
+                        <span>Subtotal</span>
+                        <span>1000</span>
+                    </div>
+                    <div class="total-item">
+                        <span>Delivery Fee</span>
+                        <span>1000</span>
+                    </div>
+                    <div class="total-item">
+                        <span>Total</span>
+                        <span class="total-amount">₦2,000</span>
+                    </div>
+                </div>
+                <div class="visual-representation">
+                    </div>
+                <div class="contact-free">
+                    Contact Free Delivery
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">...</a></li>
+                    <li><a href="#">...</a></li>
+                    <li><a href="#">...</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p>Lagos, Nigeria</p>
+                <p>01-2345678</p>
+            </div>
+        </div>
+        <div class="footer-cta">
+            <button class="button">Get My Jollof</button>
+        </div>
+        <div class="copyright">
+            © All rights reserved, Hunch 2023
+        </div>
+    </footer>
+    <script>
+        const slides = document.querySelectorAll('.slide')
+        let currentslide = 0;
+
+
+        function showPreviousSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function showNextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active')
+        }
+        // Add event listeners for navigation buttons //
+        document.getElementById('previous-button').addEventListener('click', showPreviousSlide)
+        document.getElementById('next-button').addEventListener('click', showNextSlide)
+
+        // Show the first slide//
+        slides[0].classList.add('active');
+ </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

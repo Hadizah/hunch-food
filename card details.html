@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunch - Payment Options</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="placeholder-logo.png" alt="Hunch Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="orderpage.html">Order Page</a></li>
+                    <li><a href="Basic info.html">About Us</a></li>
+                    <li><a href="payment successful.html">Track Order</a></li>
+                    <li><a href="card details.html">Contact Us</a></li>
+                    <li><a href="home page.html">Get by Jollof</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="payment-options-page">
+        <section class="info-cards-section">
+            <div class="info-card">
+                <p>Enjoy seamless and secure payment processing for all your Hunch orders. We support various payment methods to ensure a convenient checkout experience.</p>
+            </div>
+            <div class="info-card">
+                <p>For your convenience, Hunch offers multiple payment options, including online card payments, direct bank transfers, and secure payment gateways for a hassle-free transaction.</p>
+            </div>
+            <div class="info-card">
+                <p>Rest assured that all your payment information is encrypted and securely handled. Hunch prioritizes your financial security with every transaction.</p>
+            </div>
+            <div class="info-card">
+                <p>Track your payment status in real-time. Once your payment is confirmed, you'll receive an instant notification and your order will be processed promptly.</p>
+            </div>
+            <div class="info-card">
+                <p>Having trouble with your payment? Our dedicated support team is available to assist you with any payment-related queries or issues. Contact us for quick resolution.</p>
+            </div>
+        </section>
+
+        <section class="payment-selection-section">
+            <div class="payment-modal active" id="payment-step-1">
+                <div class="modal-header">
+                    <h2>How would you like to pay?</h2>
+                    <button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" name="payment-method" value="card" checked>
+                                Pay online (Card, Bank Transfer)
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="payment-method" value="pos">
+                                Pay on delivery (Card/POS)
+                            </label>
+                        </li>
+                    </ul>
+                    <button class="button primary submit-payment-option" data-next="payment-step-2">Submit</button>
+                </div>
+            </div>
+
+            <div class="payment-modal" id="payment-step-2">
+                <div class="modal-header">
+                    <h2>Please select preferred payment method</h2>
+                    <button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" name="online-payment-method" value="pay-with-card" checked>
+                                <span class="payment-icon card"></span> Pay with card
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="online-payment-method" value="pay-to-transfer">
+                                <span class="payment-icon transfer"></span> Pay to transfer
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="online-payment-method" value="pay-with-ussd">
+                                <span class="payment-icon ussd"></span> Pay with USSD
+                            </label>
+                        </li>
+                    </ul>
+                    <button class="button primary continue-payment" data-next="payment-step-3">Continue</button>
+                </div>
+            </div>
+
+            <div class="payment-modal" id="payment-step-3">
+                <div class="modal-header">
+                    <h2>Please enter your card details</h2>
+                    <button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="card-type">Card Type</label>
+                        <input type="text" id="card-type" placeholder="Visa, Mastercard, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-name">Card Name</label>
+                        <input type="text" id="card-name" placeholder="Name on card">
+                    </div>
+                    <div class="form-group inline">
+                        <label for="expiry-date">Expiry Date (MM/YY)</label>
+                        <input type="text" id="expiry-date" placeholder="MM/YY">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="CVV" class="cvv-input">
+                    </div>
+                    <button class="button primary continue-payment">Continue</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="placeholder-logo-footer.png" alt="Hunch Footer Logo">
+                </div>
+                <div class="footer-links">
+                    <div class="quick-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Meal Plans</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Contact</h3>
+                        <p>Email: info.hunch@gmail.com</p>
+                        <p>Phone: 01-234-8976</p>
+                        <p>Address: 61, Wesley street, Lagos, Nigeria.</p>
+                    </div>
+                </div>
+                <div class="footer-subscribe">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <form>
+                        <input type="email" placeholder="Your Email Address">
+                        <button type="submit" class="button secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hunch. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><img src="placeholder-facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="placeholder-twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="placeholder-instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const paymentModals = document.querySelectorAll('.payment-modal');
+    const submitPaymentOptionButton = document.querySelector('.submit-payment-option');
+    const continuePaymentButtons = document.querySelectorAll('.continue-payment');
+    const closeButtons = document.querySelectorAll('.close-button');
+
+    let currentStep = 'payment-step-1';
+
+    function showModal(modalId) {
+        paymentModals.forEach(modal => {
+            modal.classList.remove('active');
+        });
+        const modalToShow = document.getElementById(modalId);
+        if (modalToShow) {
+            modalToShow.classList.add('active');
+            currentStep = modalId;
+        }
+    }
+
+    if (submitPaymentOptionButton) {
+        submitPaymentOptionButton.addEventListener('click', function() {
+            const nextStep = this.dataset.next;
+            const selectedPaymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+            console.log('Selected Payment Method:', selectedPaymentMethod);
+            showModal(nextStep);
+        });
+    }
+
+    continuePaymentButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const nextStep = this.dataset.next;
+            if (currentStep === 'payment-step-2') {
+                const selectedOnlineMethod = document.querySelector('input[name="online-payment-method"]:checked').value;
+                console.log('Selected Online Method:', selectedOnlineMethod);
+                if (nextStep) {
+                    showModal(nextStep);
+                } else {
+                    // Handle final payment processing logic here for online methods
+                    console.log('Proceeding with online payment for:', selectedOnlineMethod);
+                    alert('Processing your online payment...');
+                }
+            } else if (currentStep === 'payment-step-3') {
+                // Handle card details submission logic here
+                const cardType = document.getElementById('card-type').value;
+                const cardNumber = document.getElementById('card-number').value;
+                const cardName = document.getElementById('card-name').value;
+                const expiryDate = document.getElementById('expiry-date').value;
+                const cvv = document.getElementById('cvv').value;
+                console.log('Card Details:', { cardType, cardNumber, cardName, expiryDate, cvv });
+                alert('Processing your card payment...');
+                
+            }
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            
+            showModal('payment-step-1');
+        });
+    });
+
+    // Initially show the first payment step
+    showModal(currentStep);
+});
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
